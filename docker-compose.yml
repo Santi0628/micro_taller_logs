@@ -70,7 +70,7 @@ services:
   promtail:
     image: grafana/promtail:latest
     volumes:
-      - /var/log:/var/log
+      - /var/lib/docker/containers:/var/lib/docker/containers
       - ./promtail-config.yml:/etc/promtail/config.yml
     command: -config.file=/etc/promtail/config.yml
 
